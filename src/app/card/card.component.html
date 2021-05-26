@@ -1,0 +1,10 @@
+<div class="card" [ngClass]="{'flipped':data.isFlipped}" (click)="toggleFlip()">
+
+    <div class="face front">
+        <img src={{data.img}} alt={{data.name}}>
+    </div>
+    <div class="face back">
+
+    </div>
+
+</div>
