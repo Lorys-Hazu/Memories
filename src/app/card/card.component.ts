@@ -18,8 +18,8 @@ export class CardComponent implements OnInit {
   isFlipped:boolean = this.data.isFlipped
 
   toggleFlip(){
-    this.messageEvent.emit(this.data)
-    console.log(this.data)
+    // On envoie les infos sur la carte au click
+      this.messageEvent.emit(this.data)
   }
 
 
