@@ -16,9 +16,11 @@ export class AppComponent {
   }
   ngOnInit(){
     this.list = this.setupCards(this._cardService.getCards())
+    this.obj = this.list.length / 2;
   }
 
   message:Card = new Card
+  public obj:number = 0;
   public isPair: boolean = false
   public counter:number = 0;
   public flippedCards:Array<Card> = [];
@@ -65,8 +67,9 @@ export class AppComponent {
       // On vide ensuite nos variable et on enlève le processus pour que le joueur puisse rejouer
       this.firstFlipped = undefined
       this.lastFlipped = undefined
+      this.counter++
       this.processing = false;
-    }, 500);
+    }, 1000);
     }
 
   }

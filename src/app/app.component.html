@@ -1,8 +1,11 @@
-<p>current flipped: {{this.message}} {{this.counter}} {{this.isPair}}</p>
+<!-- <p>current flipped: {{this.message}} {{this.counter}} {{this.isPair}}</p>
 <p>first flipped: {{this.firstFlipped?.name}}</p>
 <p>last flipped: {{this.lastFlipped?.name}}</p>
-<div>déjà flip: <p *ngFor="let af of this.flippedCards">{{af?.name}}</p></div>
-
+<div>déjà flip: <p *ngFor="let af of this.flippedCards">{{af?.name}}</p></div> -->
+<div class="header">
+    <p>Nombre d'essais: {{this.counter}}</p>
+    <p>Nombre de paires restantes {{this.obj - this.flippedCards.length}}</p>
+</div>
 <div class="board">
     <app-card *ngFor="let currentCard of list" [data]="currentCard" (messageEvent)="receiveMessage($event)"></app-card>
 </div>
